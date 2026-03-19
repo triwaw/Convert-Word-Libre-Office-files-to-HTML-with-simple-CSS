@@ -4,33 +4,53 @@ Author: Wasif Ali
 GitHub: triwaw
 
 This Python script converts Microsoft Word (.doc, .docx) and LibreOffice (.odt) files into a minimal, clean HTML/CSS package. It also accepts existing HTML files (exported from Word/LibreOffice) and performs a deep cleaning to remove clutter, flatten nested formatting, and organise images.
+
 ✨ Features
 Converts .doc, .docx, .odt to HTML using LibreOffice (headless).
+
 Accepts existing .html / .htm files directly.
+
 Removes unnecessary meta tags (generator, author, dates).
+
 Extracts all inline style attributes and <style> blocks into a single external .css file.
+
 Flattens deeply nested <span>, <font>, <b>, <i>, <u> tags – for each text fragment, it combines all applied styles into one CSS class, dramatically reducing HTML size.
+
 Copies embedded images into an images/ subfolder and updates <img> src attributes.
+
 Preserves hyperlinks (<a> tags) exactly as in the original document.
+
 Produces a portable folder containing .html, .css, and images/.
+
 📋 Requirements
 Python 3.6+
+
 Download from python.org.
+
 Python Libraries
+
 Install via pip:
+
 bash
+
 pip install beautifulsoup4 tinycss2
+
 LibreOffice (only needed for .doc, .docx, .odt files)
+
 Download from libreoffice.org.
+
 During installation, ensure the program folder is added to your system PATH so that the soffice command is available from the command line.
+
 Verify by running:
 
 bash
 soffice --version
+
 Expected output:
 
 text
 LibreOffice 26.2.1.2 620(Build:2)
+
 Note: If you only need to clean existing HTML files, LibreOffice is not required.
 
 🚀 Installation
